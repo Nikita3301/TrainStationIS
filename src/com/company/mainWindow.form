@@ -1,0 +1,600 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form xmlns="http://www.intellij.com/uidesigner/form/" version="1" bind-to-class="com.company.mainWindow">
+  <grid id="27dc6" binding="panel1" default-binding="true" layout-manager="GridLayoutManager" row-count="2" column-count="3" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+    <margin top="50" left="50" bottom="50" right="50"/>
+    <constraints>
+      <xy x="20" y="20" width="1320" height="703"/>
+    </constraints>
+    <properties>
+      <background color="-10523785"/>
+      <minimumSize width="800" height="400"/>
+      <preferredSize width="1600" height="700"/>
+    </properties>
+    <border type="none"/>
+    <children>
+      <tabbedpane id="6b5d5" binding="tabbedPane1" default-binding="true">
+        <constraints>
+          <grid row="0" column="0" row-span="1" col-span="3" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false">
+            <preferred-size width="200" height="200"/>
+          </grid>
+        </constraints>
+        <properties>
+          <background color="-2433566"/>
+        </properties>
+        <border type="none"/>
+        <children>
+          <grid id="e4e7a" binding="panelka1" layout-manager="GridLayoutManager" row-count="6" column-count="4" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+            <margin top="0" left="0" bottom="0" right="0"/>
+            <constraints>
+              <tabbedpane title="Passenger information"/>
+            </constraints>
+            <properties>
+              <background color="-2433566"/>
+            </properties>
+            <border type="none"/>
+            <children>
+              <component id="62dd0" class="javax.swing.JLabel">
+                <constraints>
+                  <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties>
+                  <horizontalAlignment value="10"/>
+                  <text value="Passenger ID"/>
+                </properties>
+              </component>
+              <component id="8fce8" class="javax.swing.JTextField" binding="passengerId1">
+                <constraints>
+                  <grid row="0" column="1" row-span="1" col-span="3" vsize-policy="0" hsize-policy="6" anchor="0" fill="0" indent="0" use-parent-layout="false">
+                    <preferred-size width="150" height="-1"/>
+                  </grid>
+                </constraints>
+                <properties>
+                  <editable value="false"/>
+                  <text value=""/>
+                </properties>
+              </component>
+              <component id="7da6e" class="javax.swing.JTextField" binding="passportNumber1">
+                <constraints>
+                  <grid row="2" column="1" row-span="1" col-span="3" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
+                    <preferred-size width="150" height="-1"/>
+                  </grid>
+                </constraints>
+                <properties>
+                  <editable value="false"/>
+                </properties>
+              </component>
+              <component id="1c65c" class="javax.swing.JLabel">
+                <constraints>
+                  <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties>
+                  <text value=" Full Name"/>
+                </properties>
+              </component>
+              <component id="46327" class="javax.swing.JLabel">
+                <constraints>
+                  <grid row="2" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties>
+                  <text value="Passport Number"/>
+                </properties>
+              </component>
+              <component id="b29be" class="javax.swing.JLabel">
+                <constraints>
+                  <grid row="4" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties>
+                  <text value="Benefits"/>
+                </properties>
+              </component>
+              <component id="a635b" class="javax.swing.JCheckBox" binding="benefits1">
+                <constraints>
+                  <grid row="4" column="1" row-span="1" col-span="3" vsize-policy="0" hsize-policy="3" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties>
+                  <enabled value="false"/>
+                  <focusPainted value="true"/>
+                  <text value=""/>
+                </properties>
+              </component>
+              <component id="ab11c" class="javax.swing.JLabel">
+                <constraints>
+                  <grid row="3" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties>
+                  <text value="Phone Number"/>
+                </properties>
+              </component>
+              <component id="bd0e6" class="javax.swing.JTextField" binding="fullName1">
+                <constraints>
+                  <grid row="1" column="1" row-span="1" col-span="3" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
+                    <preferred-size width="150" height="-1"/>
+                  </grid>
+                </constraints>
+                <properties>
+                  <editable value="false"/>
+                  <text value=""/>
+                </properties>
+              </component>
+              <component id="c56f9" class="javax.swing.JTextField" binding="phoneNumber1">
+                <constraints>
+                  <grid row="3" column="1" row-span="1" col-span="3" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
+                    <preferred-size width="150" height="-1"/>
+                  </grid>
+                </constraints>
+                <properties>
+                  <editable value="false"/>
+                </properties>
+              </component>
+              <component id="2f0f6" class="javax.swing.JButton" binding="passengerSearch">
+                <constraints>
+                  <grid row="5" column="2" row-span="1" col-span="2" vsize-policy="0" hsize-policy="3" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties>
+                  <background color="-149190"/>
+                  <horizontalAlignment value="0"/>
+                  <horizontalTextPosition value="11"/>
+                  <text value="Search and delete"/>
+                </properties>
+              </component>
+              <component id="d2800" class="javax.swing.JButton" binding="addPassengerButton">
+                <constraints>
+                  <grid row="5" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties>
+                  <background color="-3550635"/>
+                  <text value="Add Passenger"/>
+                </properties>
+              </component>
+            </children>
+          </grid>
+          <grid id="b7496" binding="panelka2" layout-manager="GridLayoutManager" row-count="10" column-count="4" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+            <margin top="0" left="0" bottom="0" right="0"/>
+            <constraints>
+              <tabbedpane title="Add new ticket"/>
+            </constraints>
+            <properties>
+              <background color="-2433566"/>
+            </properties>
+            <border type="none"/>
+            <children>
+              <component id="b2324" class="javax.swing.JLabel">
+                <constraints>
+                  <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties>
+                  <horizontalAlignment value="10"/>
+                  <text value="train ID"/>
+                </properties>
+              </component>
+              <component id="31d09" class="javax.swing.JLabel">
+                <constraints>
+                  <grid row="2" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties>
+                  <horizontalAlignment value="10"/>
+                  <text value="orderDate"/>
+                </properties>
+              </component>
+              <component id="a9694" class="javax.swing.JLabel">
+                <constraints>
+                  <grid row="3" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties>
+                  <horizontalAlignment value="10"/>
+                  <text value="wagonNumber"/>
+                </properties>
+              </component>
+              <component id="43f97" class="javax.swing.JLabel">
+                <constraints>
+                  <grid row="4" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties>
+                  <horizontalAlignment value="10"/>
+                  <text value="seatNumber"/>
+                </properties>
+              </component>
+              <component id="33ab2" class="javax.swing.JLabel">
+                <constraints>
+                  <grid row="5" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties>
+                  <horizontalAlignment value="10"/>
+                  <text value="passengerID"/>
+                </properties>
+              </component>
+              <component id="5c564" class="javax.swing.JLabel">
+                <constraints>
+                  <grid row="6" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties>
+                  <horizontalAlignment value="10"/>
+                  <text value="dateOfDeparture"/>
+                </properties>
+              </component>
+              <component id="436fd" class="javax.swing.JLabel">
+                <constraints>
+                  <grid row="7" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties>
+                  <horizontalAlignment value="10"/>
+                  <text value="dateOfArrival"/>
+                </properties>
+              </component>
+              <component id="e7c92" class="javax.swing.JLabel">
+                <constraints>
+                  <grid row="8" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties>
+                  <horizontalAlignment value="10"/>
+                  <text value="price"/>
+                </properties>
+              </component>
+              <component id="21298" class="javax.swing.JTextField" binding="oorderDate">
+                <constraints>
+                  <grid row="2" column="1" row-span="1" col-span="3" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
+                    <preferred-size width="150" height="-1"/>
+                  </grid>
+                </constraints>
+                <properties>
+                  <editable value="true"/>
+                  <text value=""/>
+                </properties>
+              </component>
+              <component id="ce89b" class="javax.swing.JTextField" binding="owagonNumber">
+                <constraints>
+                  <grid row="3" column="1" row-span="1" col-span="3" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
+                    <preferred-size width="150" height="-1"/>
+                  </grid>
+                </constraints>
+                <properties>
+                  <editable value="true"/>
+                  <text value=""/>
+                </properties>
+              </component>
+              <component id="fbcfb" class="javax.swing.JTextField" binding="oseatNumber">
+                <constraints>
+                  <grid row="4" column="1" row-span="1" col-span="3" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
+                    <preferred-size width="150" height="-1"/>
+                  </grid>
+                </constraints>
+                <properties>
+                  <editable value="true"/>
+                  <text value=""/>
+                </properties>
+              </component>
+              <component id="bf01" class="javax.swing.JTextField" binding="opassengerID">
+                <constraints>
+                  <grid row="5" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="0" fill="1" indent="0" use-parent-layout="false">
+                    <preferred-size width="150" height="-1"/>
+                  </grid>
+                </constraints>
+                <properties>
+                  <editable value="true"/>
+                  <text value=""/>
+                </properties>
+              </component>
+              <component id="5f2d4" class="javax.swing.JTextField" binding="odateOfDeparture">
+                <constraints>
+                  <grid row="6" column="1" row-span="1" col-span="3" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
+                    <preferred-size width="150" height="-1"/>
+                  </grid>
+                </constraints>
+                <properties>
+                  <editable value="true"/>
+                  <text value=""/>
+                </properties>
+              </component>
+              <component id="8134a" class="javax.swing.JTextField" binding="odateOfArrival">
+                <constraints>
+                  <grid row="7" column="1" row-span="1" col-span="3" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
+                    <preferred-size width="150" height="-1"/>
+                  </grid>
+                </constraints>
+                <properties>
+                  <editable value="true"/>
+                  <text value=""/>
+                </properties>
+              </component>
+              <component id="dd271" class="javax.swing.JTextField" binding="oprice">
+                <constraints>
+                  <grid row="8" column="1" row-span="1" col-span="3" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
+                    <preferred-size width="150" height="-1"/>
+                  </grid>
+                </constraints>
+                <properties>
+                  <editable value="true"/>
+                  <text value=""/>
+                </properties>
+              </component>
+              <component id="d1b79" class="javax.swing.JLabel">
+                <constraints>
+                  <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties>
+                  <horizontalAlignment value="10"/>
+                  <text value="ticket ID"/>
+                </properties>
+              </component>
+              <component id="dfae1" class="javax.swing.JTextField" binding="oticketId">
+                <constraints>
+                  <grid row="0" column="1" row-span="1" col-span="2" vsize-policy="0" hsize-policy="6" anchor="8" fill="0" indent="0" use-parent-layout="false">
+                    <preferred-size width="150" height="-1"/>
+                  </grid>
+                </constraints>
+                <properties>
+                  <editable value="false"/>
+                  <text value=""/>
+                </properties>
+              </component>
+              <component id="b7cd5" class="javax.swing.JTextField" binding="otrainId">
+                <constraints>
+                  <grid row="1" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="2" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties/>
+              </component>
+              <component id="5fca7" class="javax.swing.JButton" binding="passengerInfoButton">
+                <constraints>
+                  <grid row="5" column="2" row-span="1" col-span="2" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties>
+                  <text value="passenger numbers"/>
+                </properties>
+              </component>
+              <component id="2b4" class="javax.swing.JButton" binding="trainNumberInfoButton">
+                <constraints>
+                  <grid row="1" column="2" row-span="1" col-span="2" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties>
+                  <margin top="0" left="0" bottom="0" right="0"/>
+                  <text value="train numbers"/>
+                </properties>
+              </component>
+              <component id="23296" class="javax.swing.JLabel">
+                <constraints>
+                  <grid row="0" column="3" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties>
+                  <text value="Date format: 2021-02-20 21:00:00"/>
+                </properties>
+              </component>
+              <component id="9fd0a" class="javax.swing.JButton" binding="addTicketButton">
+                <constraints>
+                  <grid row="9" column="1" row-span="1" col-span="3" vsize-policy="0" hsize-policy="3" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties>
+                  <background color="-3550635"/>
+                  <text value="Add"/>
+                </properties>
+              </component>
+            </children>
+          </grid>
+          <grid id="c1f0" layout-manager="GridLayoutManager" row-count="2" column-count="3" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+            <margin top="0" left="0" bottom="0" right="0"/>
+            <constraints>
+              <tabbedpane title="Train"/>
+            </constraints>
+            <properties/>
+            <border type="none"/>
+            <children>
+              <scrollpane id="19a99">
+                <constraints>
+                  <grid row="0" column="0" row-span="1" col-span="3" vsize-policy="7" hsize-policy="7" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties>
+                  <background color="-2433566"/>
+                </properties>
+                <border type="none"/>
+                <children>
+                  <component id="84712" class="javax.swing.JTable" binding="trainTable">
+                    <constraints/>
+                    <properties>
+                      <background color="-2433566"/>
+                    </properties>
+                  </component>
+                </children>
+              </scrollpane>
+              <component id="7234c" class="javax.swing.JButton" binding="addTrainButton">
+                <constraints>
+                  <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties>
+                  <background color="-3550635"/>
+                  <text value="Add"/>
+                </properties>
+              </component>
+              <component id="e08a0" class="javax.swing.JButton" binding="deleteTrainButton">
+                <constraints>
+                  <grid row="1" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties>
+                  <background color="-149190"/>
+                  <text value="Delete"/>
+                </properties>
+              </component>
+              <component id="8974a" class="javax.swing.JButton" binding="updateTrainButton">
+                <constraints>
+                  <grid row="1" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties>
+                  <background color="-149190"/>
+                  <text value="Update"/>
+                </properties>
+              </component>
+            </children>
+          </grid>
+          <grid id="bd03" layout-manager="GridLayoutManager" row-count="3" column-count="3" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+            <margin top="0" left="0" bottom="0" right="0"/>
+            <constraints>
+              <tabbedpane title="Train route"/>
+            </constraints>
+            <properties/>
+            <border type="none"/>
+            <children>
+              <component id="4e8fa" class="javax.swing.JButton" binding="deleteTrainRouteButton">
+                <constraints>
+                  <grid row="2" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties>
+                  <background color="-149190"/>
+                  <text value="Delete"/>
+                </properties>
+              </component>
+              <component id="b11dd" class="javax.swing.JButton" binding="addTrainRouteButton">
+                <constraints>
+                  <grid row="2" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties>
+                  <background color="-3550635"/>
+                  <text value="Add"/>
+                </properties>
+              </component>
+              <scrollpane id="eca30">
+                <constraints>
+                  <grid row="0" column="0" row-span="2" col-span="3" vsize-policy="7" hsize-policy="7" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties>
+                  <background color="-2433566"/>
+                </properties>
+                <border type="none"/>
+                <children>
+                  <component id="7ded7" class="javax.swing.JTable" binding="trainRouteTable">
+                    <constraints/>
+                    <properties>
+                      <background color="-2433566"/>
+                    </properties>
+                  </component>
+                </children>
+              </scrollpane>
+              <component id="aead0" class="javax.swing.JButton" binding="updateTrainRouteButton">
+                <constraints>
+                  <grid row="2" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties>
+                  <background color="-149190"/>
+                  <text value="Update"/>
+                </properties>
+              </component>
+            </children>
+          </grid>
+          <grid id="1bab8" layout-manager="GridLayoutManager" row-count="2" column-count="3" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+            <margin top="0" left="0" bottom="0" right="0"/>
+            <constraints>
+              <tabbedpane title="Company information"/>
+            </constraints>
+            <properties/>
+            <border type="none"/>
+            <children>
+              <scrollpane id="89593">
+                <constraints>
+                  <grid row="0" column="0" row-span="1" col-span="3" vsize-policy="7" hsize-policy="7" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties>
+                  <background color="-2433566"/>
+                </properties>
+                <border type="none"/>
+                <children>
+                  <component id="9f9fe" class="javax.swing.JTable" binding="companyInfoTable">
+                    <constraints/>
+                    <properties>
+                      <background color="-2433566"/>
+                    </properties>
+                  </component>
+                </children>
+              </scrollpane>
+              <component id="c6bda" class="javax.swing.JButton" binding="addCompanyButton">
+                <constraints>
+                  <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties>
+                  <background color="-3550635"/>
+                  <text value="Add"/>
+                </properties>
+              </component>
+              <component id="a548b" class="javax.swing.JButton" binding="updateCompanyButton">
+                <constraints>
+                  <grid row="1" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties>
+                  <background color="-149190"/>
+                  <text value="Update"/>
+                </properties>
+              </component>
+              <component id="39e3f" class="javax.swing.JButton" binding="deleteCompanyButton">
+                <constraints>
+                  <grid row="1" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties>
+                  <background color="-149190"/>
+                  <text value="Delete"/>
+                </properties>
+              </component>
+            </children>
+          </grid>
+          <grid id="1b90d" layout-manager="GridLayoutManager" row-count="2" column-count="4" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+            <margin top="0" left="0" bottom="0" right="0"/>
+            <constraints>
+              <tabbedpane title="Tickets"/>
+            </constraints>
+            <properties/>
+            <border type="none"/>
+            <children>
+              <scrollpane id="b1430">
+                <constraints>
+                  <grid row="0" column="0" row-span="1" col-span="4" vsize-policy="7" hsize-policy="7" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties>
+                  <background color="-2433566"/>
+                </properties>
+                <border type="none"/>
+                <children>
+                  <component id="fc8fa" class="javax.swing.JTable" binding="ticketTable">
+                    <constraints/>
+                    <properties>
+                      <background color="-2433566"/>
+                    </properties>
+                  </component>
+                </children>
+              </scrollpane>
+              <component id="9c43b" class="javax.swing.JButton" binding="ticketSearchButton">
+                <constraints>
+                  <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties>
+                  <background color="-149190"/>
+                  <text value="Search"/>
+                </properties>
+              </component>
+              <component id="be813" class="javax.swing.JButton" binding="ticketDeleteButton">
+                <constraints>
+                  <grid row="1" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties>
+                  <background color="-149190"/>
+                  <text value="Delete"/>
+                </properties>
+              </component>
+              <component id="85b6b" class="javax.swing.JButton" binding="ticketUpdateButton">
+                <constraints>
+                  <grid row="1" column="3" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties>
+                  <background color="-149190"/>
+                  <text value="Update"/>
+                </properties>
+              </component>
+              <component id="fdef5" class="javax.swing.JComboBox" binding="searchComboBox1">
+                <constraints>
+                  <grid row="1" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="2" anchor="8" fill="1" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties>
+                  <background color="-2433566"/>
+                </properties>
+              </component>
+            </children>
+          </grid>
+        </children>
+      </tabbedpane>
+    </children>
+  </grid>
+</form>

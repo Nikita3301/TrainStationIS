@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form xmlns="http://www.intellij.com/uidesigner/form/" version="1" bind-to-class="com.company.loginWindow">
+  <grid id="27dc6" binding="panel1" default-binding="true" layout-manager="FormLayout">
+    <rowspec value="center:max(d;4px):noGrow"/>
+    <rowspec value="top:15dlu:noGrow"/>
+    <rowspec value="center:d:noGrow"/>
+    <rowspec value="top:4dlu:noGrow"/>
+    <rowspec value="center:max(d;4px):noGrow"/>
+    <rowspec value="top:4dlu:noGrow"/>
+    <rowspec value="center:max(d;4px):noGrow"/>
+    <rowspec value="top:4dlu:noGrow"/>
+    <rowspec value="center:max(d;4px):noGrow"/>
+    <rowspec value="top:4dlu:noGrow"/>
+    <rowspec value="center:max(d;4px):noGrow"/>
+    <rowspec value="top:4dlu:noGrow"/>
+    <rowspec value="center:max(d;4px):noGrow"/>
+    <rowspec value="top:15dlu:noGrow"/>
+    <rowspec value="center:max(d;4px):noGrow"/>
+    <rowspec value="top:4dlu:noGrow"/>
+    <rowspec value="center:37px:noGrow"/>
+    <colspec value="fill:39px:noGrow"/>
+    <colspec value="left:4dlu:noGrow"/>
+    <colspec value="fill:d:grow"/>
+    <colspec value="left:23dlu:noGrow"/>
+    <constraints>
+      <xy x="10" y="8" width="536" height="483"/>
+    </constraints>
+    <properties>
+      <background color="-10523785"/>
+      <enabled value="false"/>
+      <foreground color="-9425477"/>
+      <inheritsPopupMenu value="true"/>
+      <maximumSize width="514" height="269"/>
+      <minimumSize width="500" height="262"/>
+      <preferredSize width="350" height="400"/>
+    </properties>
+    <border type="none"/>
+    <children>
+      <component id="374a9" class="javax.swing.JLabel" binding="img">
+        <constraints>
+          <grid row="2" column="2" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+          <forms/>
+        </constraints>
+        <properties>
+          <alignmentY value="0.0"/>
+          <horizontalAlignment value="0"/>
+          <horizontalTextPosition value="0"/>
+          <icon value="com/icon/fox3.png"/>
+          <inheritsPopupMenu value="false"/>
+          <text value="Sign in to system"/>
+          <verticalAlignment value="1"/>
+          <verticalTextPosition value="3"/>
+        </properties>
+      </component>
+      <component id="ef8b5" class="javax.swing.JButton" binding="loginButton">
+        <constraints>
+          <grid row="14" column="2" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+          <forms/>
+        </constraints>
+        <properties>
+          <background color="-3550635"/>
+          <text value="Connect"/>
+        </properties>
+      </component>
+      <component id="b8f9f" class="javax.swing.JLabel">
+        <constraints>
+          <grid row="4" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+          <forms/>
+        </constraints>
+        <properties>
+          <alignmentX value="0.0"/>
+          <text value="Login"/>
+        </properties>
+      </component>
+      <component id="6fa87" class="javax.swing.JTextField" binding="loginTextField">
+        <constraints>
+          <grid row="6" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
+            <preferred-size width="150" height="-1"/>
+          </grid>
+          <forms defaultalign-horz="false"/>
+        </constraints>
+        <properties>
+          <background color="-2433566"/>
+          <preferredSize width="49" height="30"/>
+          <text value=""/>
+        </properties>
+      </component>
+      <component id="7336e" class="javax.swing.JLabel">
+        <constraints>
+          <grid row="8" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+          <forms/>
+        </constraints>
+        <properties>
+          <text value="Password"/>
+        </properties>
+      </component>
+      <component id="e42f9" class="javax.swing.JPasswordField" binding="passwordTextField">
+        <constraints>
+          <grid row="10" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
+            <preferred-size width="150" height="-1"/>
+          </grid>
+          <forms defaultalign-horz="false"/>
+        </constraints>
+        <properties>
+          <background color="-2433566"/>
+          <preferredSize width="49" height="30"/>
+        </properties>
+      </component>
+      <component id="59dfd" class="javax.swing.JCheckBox" binding="showPasswordCheckBox">
+        <constraints>
+          <grid row="12" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+          <forms/>
+        </constraints>
+        <properties>
+          <background color="-10523785"/>
+          <text value="show password"/>
+        </properties>
+      </component>
+      <component id="4c8b6" class="javax.swing.JTextField" binding="incorrectTextField">
+        <constraints>
+          <grid row="16" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
+            <preferred-size width="150" height="-1"/>
+          </grid>
+          <forms defaultalign-horz="false"/>
+        </constraints>
+        <properties>
+          <background color="-891614"/>
+          <visible value="false"/>
+        </properties>
+      </component>
+    </children>
+  </grid>
+</form>
