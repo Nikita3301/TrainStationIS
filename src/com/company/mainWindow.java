@@ -2,10 +2,11 @@ package com.company;
 
 import net.proteanit.sql.DbUtils;
 
+import java.awt.event.*;
+import java.sql.Connection;
+import java.sql.DriverManager;
 import javax.swing.*;
 import java.awt.*;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
 import java.sql.*;
 import java.util.Objects;
 
@@ -53,34 +54,33 @@ public class mainWindow {
     private JButton ticketDeleteButton;
     private JButton ticketUpdateButton;
     private JComboBox<String> searchComboBox1;
+    private JButton updatePassengerButton;
+    private JTable passengerTable;
+    private JTextField emloyeeId;
+    private JTextField employeeFullName;
+    private JComboBox<String> genderComboBox;
+    private JTextField employeePhone;
+    private JTextField employeeLogin;
+    private JTextField employeePassword;
+    private JButton registerButton;
 
 
-
-    public mainWindow(String username, String password) throws SQLException{
+    public mainWindow() throws SQLException{
 
         Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/riabov", "root", "nikita070901");
-        //passenger information with special id
+
+        PreparedStatement ps1 = con.prepareStatement("select * from riabov.passenger");
+        ResultSet rs = ps1.executeQuery();
+        passengerTable.setModel(DbUtils.resultSetToTableModel(rs));
+
+        //employeeId in add employee tab
         Statement st = con.createStatement();
-        ResultSet rs = st.executeQuery("SELECT * FROM riabov.passenger inner join riabov.login on passenger.passengerID = login.passengerID  where login.username = '"+username+"' and login.password = '"+password+"';");
-        if (rs.next()) {
-            String passengerId = rs.getString("passengerID");
-            String fullName = rs.getString("fullName");
-            String passportNumber = rs.getString("passportNumber");
-            String phoneNumber = rs.getString("phoneNumber");
-            boolean benefits = rs.getBoolean("benefits");
-            passengerId1.setText(passengerId);
-            fullName1.setText(fullName);
-            passportNumber1.setText(passportNumber);
-            phoneNumber1.setText(phoneNumber);
-            benefits1.setSelected(benefits);
+        ResultSet rs1 = st.executeQuery("SELECT MAX(employeeID) FROM riabov.employee;");
+        if (rs1.next()) {
+            int employeeID = rs1.getInt(1);
+            emloyeeId.setText(String.valueOf(employeeID + 1));
         }
 
-        //get trainID in add new ticket tab
-        ResultSet rs1 = st.executeQuery("SELECT MAX(ticketID) FROM riabov.ticket;");
-        if (rs1.next()){
-            int ticketID = rs1.getInt(1);
-            oticketId.setText(String.valueOf(ticketID+1));
-        }
 
 
 
@@ -356,6 +356,59 @@ public class mainWindow {
             }
         });
 
+        updatePassengerButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                try {
+                    PreparedStatement ps1 = con.prepareStatement("select * from riabov.passenger");
+                    ResultSet rs = ps1.executeQuery();
+                    passengerTable.setModel(DbUtils.resultSetToTableModel(rs));
+                } catch (SQLException ex) {
+                    ex.printStackTrace();
+                }
+
+            }
+        });
+
+        registerButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                try {
+                    Statement st = con.createStatement();
+                    ResultSet rs1 = st.executeQuery("SELECT MAX(employeeID) FROM riabov.employee;");
+                    if (rs1.next()) {
+                        int employeeID = rs1.getInt(1);
+                        emloyeeId.setText(String.valueOf(employeeID + 1));
+                    }
+                    String genderValue = Objects.requireNonNull(genderComboBox.getSelectedItem()).toString();
+                    PreparedStatement ps1 = con.prepareStatement("INSERT INTO riabov.employee(employeeID, fullName, gender, phoneNumber, login, password) Values(?,?,?,?,?,?);");
+                    ps1.setString(1, null);
+                    ps1.setString(2, employeeFullName.getText());
+                    ps1.setString(3, genderValue);
+                    ps1.setString(4, employeePhone.getText());
+                    ps1.setString(5, employeeLogin.getText());
+                    ps1.setString(6, employeePassword.getText());
+                    ps1.executeUpdate();
+                    JOptionPane.showMessageDialog(null, "Add is successful");
+                    employeeFullName.setText("");
+                    genderComboBox.setSelectedItem("Other");
+                    employeePhone.setText("");
+                    employeeLogin.setText("");
+                    employeePassword.setText("");
+                    ResultSet rs2 = st.executeQuery("SELECT MAX(employeeID) FROM riabov.employee;");
+                    if (rs2.next()) {
+                        int employeeID = rs2.getInt(1);
+                        emloyeeId.setText(String.valueOf(employeeID + 1));
+                    }
+
+                } catch (SQLException ex) {
+                    JOptionPane.showMessageDialog(null, "Add failed"+"\n"+ex.getMessage());
+                }
+            }
+
+        });
+
+
 
         searchComboBox1.addItem("ticketID");
         searchComboBox1.addItem("trainID");
@@ -366,7 +419,11 @@ public class mainWindow {
         searchComboBox1.addItem("dateOfDeparture");
         searchComboBox1.addItem("dateOfArrival");
         searchComboBox1.addItem("price");
-        searchComboBox1.setSelectedItem(null);
+        genderComboBox.addItem("Other");
+        genderComboBox.addItem("Male");
+        genderComboBox.addItem("Female");
+
+
 
         JFrame frame = new JFrame("Main Window");
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -375,6 +432,7 @@ public class mainWindow {
         frame.pack();
         frame.setVisible(true);
 //        con.close();
+
     }
 
 

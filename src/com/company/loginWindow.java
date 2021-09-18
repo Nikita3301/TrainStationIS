@@ -6,6 +6,8 @@ import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.sql.*;
+import java.sql.Connection;
+import java.sql.DriverManager;
 
 
 
@@ -28,19 +30,18 @@ public class loginWindow{
             @Override
             public void actionPerformed(ActionEvent e) {
                 try{
-                    Class.forName("com.mysql.jdbc.Driver");
                     Connection con = DriverManager.getConnection(
                             "jdbc:mysql://localhost:3306/riabov",
                             "root", "nikita070901");
-                    String username = loginTextField.getText();
+                    String login = loginTextField.getText();
                     String password = passwordTextField.getText();
 
                     Statement stm = con.createStatement();
-                    String sql = "select * from login where username='"+username+"' and password='"+password+"'";
+                    String sql = "select * from employee where login='"+login+"' and password='"+password+"'";
                     ResultSet rs = stm.executeQuery(sql);
                     if (rs.next()){
                         loginFrame.dispose();
-                        new mainWindow(username,password);
+                        new mainWindow();
 //                        mainFrame();
                     }else{
                         incorrectTextField.setVisible(true);

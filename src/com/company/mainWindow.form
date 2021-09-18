@@ -23,7 +23,7 @@
         </properties>
         <border type="none"/>
         <children>
-          <grid id="e4e7a" binding="panelka1" layout-manager="GridLayoutManager" row-count="6" column-count="4" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+          <grid id="e4e7a" binding="panelka1" layout-manager="GridLayoutManager" row-count="2" column-count="5" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
             <margin top="0" left="0" bottom="0" right="0"/>
             <constraints>
               <tabbedpane title="Passenger information"/>
@@ -33,102 +33,9 @@
             </properties>
             <border type="none"/>
             <children>
-              <component id="62dd0" class="javax.swing.JLabel">
-                <constraints>
-                  <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
-                </constraints>
-                <properties>
-                  <horizontalAlignment value="10"/>
-                  <text value="Passenger ID"/>
-                </properties>
-              </component>
-              <component id="8fce8" class="javax.swing.JTextField" binding="passengerId1">
-                <constraints>
-                  <grid row="0" column="1" row-span="1" col-span="3" vsize-policy="0" hsize-policy="6" anchor="0" fill="0" indent="0" use-parent-layout="false">
-                    <preferred-size width="150" height="-1"/>
-                  </grid>
-                </constraints>
-                <properties>
-                  <editable value="false"/>
-                  <text value=""/>
-                </properties>
-              </component>
-              <component id="7da6e" class="javax.swing.JTextField" binding="passportNumber1">
-                <constraints>
-                  <grid row="2" column="1" row-span="1" col-span="3" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
-                    <preferred-size width="150" height="-1"/>
-                  </grid>
-                </constraints>
-                <properties>
-                  <editable value="false"/>
-                </properties>
-              </component>
-              <component id="1c65c" class="javax.swing.JLabel">
-                <constraints>
-                  <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
-                </constraints>
-                <properties>
-                  <text value=" Full Name"/>
-                </properties>
-              </component>
-              <component id="46327" class="javax.swing.JLabel">
-                <constraints>
-                  <grid row="2" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
-                </constraints>
-                <properties>
-                  <text value="Passport Number"/>
-                </properties>
-              </component>
-              <component id="b29be" class="javax.swing.JLabel">
-                <constraints>
-                  <grid row="4" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
-                </constraints>
-                <properties>
-                  <text value="Benefits"/>
-                </properties>
-              </component>
-              <component id="a635b" class="javax.swing.JCheckBox" binding="benefits1">
-                <constraints>
-                  <grid row="4" column="1" row-span="1" col-span="3" vsize-policy="0" hsize-policy="3" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
-                </constraints>
-                <properties>
-                  <enabled value="false"/>
-                  <focusPainted value="true"/>
-                  <text value=""/>
-                </properties>
-              </component>
-              <component id="ab11c" class="javax.swing.JLabel">
-                <constraints>
-                  <grid row="3" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
-                </constraints>
-                <properties>
-                  <text value="Phone Number"/>
-                </properties>
-              </component>
-              <component id="bd0e6" class="javax.swing.JTextField" binding="fullName1">
-                <constraints>
-                  <grid row="1" column="1" row-span="1" col-span="3" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
-                    <preferred-size width="150" height="-1"/>
-                  </grid>
-                </constraints>
-                <properties>
-                  <editable value="false"/>
-                  <text value=""/>
-                </properties>
-              </component>
-              <component id="c56f9" class="javax.swing.JTextField" binding="phoneNumber1">
-                <constraints>
-                  <grid row="3" column="1" row-span="1" col-span="3" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
-                    <preferred-size width="150" height="-1"/>
-                  </grid>
-                </constraints>
-                <properties>
-                  <editable value="false"/>
-                </properties>
-              </component>
               <component id="2f0f6" class="javax.swing.JButton" binding="passengerSearch">
                 <constraints>
-                  <grid row="5" column="2" row-span="1" col-span="2" vsize-policy="0" hsize-policy="3" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+                  <grid row="1" column="2" row-span="1" col-span="2" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
                 </constraints>
                 <properties>
                   <background color="-149190"/>
@@ -139,11 +46,37 @@
               </component>
               <component id="d2800" class="javax.swing.JButton" binding="addPassengerButton">
                 <constraints>
-                  <grid row="5" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+                  <grid row="1" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
                 </constraints>
                 <properties>
                   <background color="-3550635"/>
                   <text value="Add Passenger"/>
+                </properties>
+              </component>
+              <scrollpane id="ba33d">
+                <constraints>
+                  <grid row="0" column="0" row-span="1" col-span="5" vsize-policy="7" hsize-policy="7" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties>
+                  <background color="-2433566"/>
+                </properties>
+                <border type="none"/>
+                <children>
+                  <component id="51811" class="javax.swing.JTable" binding="passengerTable">
+                    <constraints/>
+                    <properties>
+                      <background color="-2433566"/>
+                    </properties>
+                  </component>
+                </children>
+              </scrollpane>
+              <component id="fee17" class="javax.swing.JButton" binding="updatePassengerButton">
+                <constraints>
+                  <grid row="1" column="4" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties>
+                  <background color="-149190"/>
+                  <text value="Update"/>
                 </properties>
               </component>
             </children>
@@ -591,6 +524,141 @@
                   <background color="-2433566"/>
                 </properties>
               </component>
+            </children>
+          </grid>
+          <grid id="92756" layout-manager="GridLayoutManager" row-count="4" column-count="6" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+            <margin top="0" left="0" bottom="0" right="0"/>
+            <constraints>
+              <tabbedpane title="Add employee"/>
+            </constraints>
+            <properties>
+              <background color="-2433566"/>
+            </properties>
+            <border type="none"/>
+            <children>
+              <component id="28172" class="javax.swing.JLabel">
+                <constraints>
+                  <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties>
+                  <text value="Employee ID"/>
+                </properties>
+              </component>
+              <component id="913da" class="javax.swing.JTextField" binding="emloyeeId">
+                <constraints>
+                  <grid row="0" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="0" indent="0" use-parent-layout="false">
+                    <preferred-size width="598" height="30"/>
+                  </grid>
+                </constraints>
+                <properties>
+                  <editable value="false"/>
+                </properties>
+              </component>
+              <component id="acb59" class="javax.swing.JLabel">
+                <constraints>
+                  <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties>
+                  <text value="Full name"/>
+                </properties>
+              </component>
+              <component id="e8d16" class="javax.swing.JTextField" binding="employeeFullName">
+                <constraints>
+                  <grid row="1" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
+                    <preferred-size width="598" height="30"/>
+                  </grid>
+                </constraints>
+                <properties/>
+              </component>
+              <component id="19962" class="javax.swing.JLabel">
+                <constraints>
+                  <grid row="2" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties>
+                  <text value="Gender"/>
+                </properties>
+              </component>
+              <component id="53e73" class="javax.swing.JComboBox" binding="genderComboBox">
+                <constraints>
+                  <grid row="2" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="2" anchor="8" fill="1" indent="0" use-parent-layout="false">
+                    <preferred-size width="598" height="30"/>
+                  </grid>
+                </constraints>
+                <properties/>
+              </component>
+              <component id="48de5" class="javax.swing.JLabel">
+                <constraints>
+                  <grid row="3" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties>
+                  <text value="Phone number"/>
+                </properties>
+              </component>
+              <component id="bb4d7" class="javax.swing.JTextField" binding="employeePhone">
+                <constraints>
+                  <grid row="3" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
+                    <preferred-size width="598" height="30"/>
+                  </grid>
+                </constraints>
+                <properties/>
+              </component>
+              <component id="f6329" class="javax.swing.JButton" binding="registerButton" default-binding="true">
+                <constraints>
+                  <grid row="3" column="4" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="0" indent="0" use-parent-layout="false">
+                    <preferred-size width="264" height="30"/>
+                  </grid>
+                </constraints>
+                <properties>
+                  <background color="-3550635"/>
+                  <text value="Register"/>
+                </properties>
+              </component>
+              <component id="9a7a8" class="javax.swing.JTextField" binding="employeePassword">
+                <constraints>
+                  <grid row="2" column="4" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
+                    <preferred-size width="264" height="30"/>
+                  </grid>
+                </constraints>
+                <properties/>
+              </component>
+              <component id="7ae14" class="javax.swing.JTextField" binding="employeeLogin">
+                <constraints>
+                  <grid row="1" column="4" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
+                    <preferred-size width="264" height="30"/>
+                  </grid>
+                </constraints>
+                <properties/>
+              </component>
+              <component id="19461" class="javax.swing.JLabel">
+                <constraints>
+                  <grid row="2" column="3" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false">
+                    <preferred-size width="108" height="16"/>
+                  </grid>
+                </constraints>
+                <properties>
+                  <text value="Password"/>
+                </properties>
+              </component>
+              <component id="13289" class="javax.swing.JLabel">
+                <constraints>
+                  <grid row="1" column="3" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false">
+                    <preferred-size width="108" height="16"/>
+                  </grid>
+                </constraints>
+                <properties>
+                  <text value="Login"/>
+                </properties>
+              </component>
+              <hspacer id="f0fd1">
+                <constraints>
+                  <grid row="1" column="2" row-span="1" col-span="1" vsize-policy="1" hsize-policy="6" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+                </constraints>
+              </hspacer>
+              <hspacer id="78a04">
+                <constraints>
+                  <grid row="1" column="5" row-span="1" col-span="1" vsize-policy="1" hsize-policy="6" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+                </constraints>
+              </hspacer>
             </children>
           </grid>
         </children>

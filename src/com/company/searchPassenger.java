@@ -23,6 +23,9 @@ public class searchPassenger {
 
     public searchPassenger() throws SQLException {
         Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/riabov", "root", "nikita070901");
+        Statement st = con.createStatement();
+        ResultSet rs = st.executeQuery("SELECT * FROM riabov.passenger;");
+        table1.setModel(DbUtils.resultSetToTableModel(rs));
         searchButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -34,9 +37,9 @@ public class searchPassenger {
                     } else if (!fullName1.getText().equals("")) {
                         sql = "SELECT * FROM riabov.passenger where fullName like '%" + fullName1.getText() + "%'";
                     } else if (!passportNumber1.getText().equals("")) {
-                        sql = "SELECT * FROM riabov.passenger where passportNumber like '" + passportNumber1.getText() + "'";
+                        sql = "SELECT * FROM riabov.passenger where passportNumber like '%" + passportNumber1.getText() + "%'";
                     } else if (!phoneNumber1.getText().equals("")) {
-                        sql = "SELECT * FROM riabov.passenger where phoneNumber like '" + phoneNumber1.getText() + "'";
+                        sql = "SELECT * FROM riabov.passenger where phoneNumber like '%" + phoneNumber1.getText() + "%'";
                     } else if (benefits1.isSelected()) {
                         sql = "SELECT * FROM riabov.passenger where benefits like true";
                     } else if (!benefits1.isSelected()) {
@@ -114,6 +117,17 @@ public class searchPassenger {
                 benefits1.setSelected(false);
             }
         });
+        phoneNumber1.addKeyListener(new KeyAdapter() {
+            @Override
+            public void keyTyped(KeyEvent e) {
+                super.keyTyped(e);
+                passengerId1.setText(null);
+                fullName1.setText(null);
+                passportNumber1.setText(null);
+                benefits1.setSelected(false);
+            }
+        });
+
         benefits1.addMouseListener(new MouseAdapter() {
             @Override
             public void mouseClicked(MouseEvent e) {
@@ -124,6 +138,7 @@ public class searchPassenger {
                 phoneNumber1.setText(null);
             }
         });
+
     }
 
     public static void main(String[] args) throws SQLException {
